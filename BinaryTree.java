@@ -230,6 +230,33 @@ public class BinaryTree<E> implements Iterable<E>
 	*/
 	public Iterator<E> iterator()
 	{
+		return inorderIterator();
+	}
+	
+	/**
+	*	For iterating this class
+	*	@return Iterator<E>	to iterate stored values
+	*/
+	public Iterator<E> preorderIterator()
+	{
+		return new PreOrderIterator<E>(this);
+	}
+	
+	/**
+	*	For iterating this class
+	*	@return Iterator<E>	to iterate stored values
+	*/
+	public Iterator<E> inorderIterator()
+	{
 		return new InOrderIterator<E>(this);
+	}
+	
+	/**
+	*	For iterating this class
+	*	@return Iterator<E>	to iterate stored values
+	*/
+	public Iterator<E> postorderIterator()
+	{
+		return new PostOrderIterator<E>(this);
 	}
 }
