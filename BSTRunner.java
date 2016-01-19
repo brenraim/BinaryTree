@@ -1,5 +1,6 @@
 public class BSTRunner
 {
+	@SuppressWarnings("unchecked")
 	public static void main (String[] args)
 	{
 		BST bst = new BST<String>();
